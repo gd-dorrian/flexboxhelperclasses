@@ -1,0 +1,174 @@
+/* --------------------------------------
+/*  Variables
+/* -------------------------------------- */
+
+// Set a prefix
+$main-prefix: "fx-";
+
+// Reverse order because mobile first.
+$media-sizes: (
+    "xl": "min-width: 1200px",
+    "lg": "min-width: 992px",
+    "md": "min-width: 768px",
+    "sm": "min-width: 544px",
+    "xs": "min-width: 0em"
+);
+
+/* --------------------------------------
+/*  Foreach
+/* -------------------------------------- */
+
+@each $size, $i in $media-sizes {
+
+  @media (#{$i}) {
+
+    @if($size == "xs") { .bg-xs{background: orange;} }
+    @if($size == "sm") { .bg-sm{background: orange;} }
+    @if($size == "md") { .bg-md{background: orange;} }
+    @if($size == "lg") { .bg-lg{background: orange;} }
+    @if($size == "xl") { .bg-xl{background: orange;} }
+
+    // =============================================== //
+
+    // Flex Display
+    $flex-display-properties: ("" : "flex", "-inline": "inline-flex");
+    @each $label, $property in $flex-display-properties {
+      .#{$main-prefix + $size + "-" + "display" + $label} {
+        display: #{"-webkit-" + $property};
+        display: #{"-moz-" + $property};
+        display: #{"-ms-" + $property + "box"}; // IE10 uses -ms-flexbox
+        display: #{"-ms-" + $property}; // IE11
+        display: #{$property};
+      }
+    }
+
+    // =============================================== //
+
+    // Flex Direction
+    $flex-direction-properties: ("" : "row", "-reverse" : "row-reverse", "-column" : "column", "-column-reverse" : "column-reverse");
+    @each $label, $property in $flex-direction-properties {
+      .#{$main-prefix + $size + "-" + "direction" + $label} {
+        -webkit-flex-direction: #{$property};
+        -moz-flex-direction: #{$property};
+        -ms-flex-direction: #{$property};
+        flex-direction: #{$property};
+      }
+    }
+
+    // =============================================== //
+
+    // Flex Wrap
+    $flex-wrap-properties: ("" : "wrap", "-nowrap" : "nowrap", "-reverse" : "wrap-reverse");
+    @each $label, $property in $flex-wrap-properties {
+      .#{$main-prefix + $size + "-" + "wrap" + $label} {
+        -webkit-flex-wrap: #{$property};
+        -moz-flex-wrap: #{$property};
+        -ms-flex-wrap: #{$property};
+        flex-wrap: #{$property};
+      }
+    }
+
+    // =============================================== //
+
+    /* Flex Flow */
+    // Will think about it...
+
+    // =============================================== //
+
+    // Justify Content
+    $justify-content-properties: ("-flex-start" : "flex-start", "-flex-end" : "flex-end", "-center" : "center", "-space-between" : "space-between", "-space-around" : "space-around");
+    @each $label, $property in $justify-content-properties {
+      .#{$main-prefix + $size + "-" + "justify" + $label} {
+        -webkit-justify-content: #{$property};
+        -moz-justify-content: #{$property};
+        -ms-justify-content: #{$property};
+        justify-content: #{$property};
+      }
+    }
+
+    // =============================================== //
+
+    // Align Content
+    $align-content-properties: ("-flex-start" : "flex-start", "-flex-end" : "flex-end", "-center" : "center", "-space-between" : "space-between", "-space-around" : "space-around", "-stretch" : "stretch");
+    @each $label, $property in $align-content-properties {
+      .#{$main-prefix + $size + "-" + "align-content" + $label} {
+        -webkit-align-content: #{$property};
+        -moz-align-content: #{$property};
+        -ms-align-content: #{$property};
+        align-content: #{$property};
+      }
+    }
+
+
+    // =============================================== //
+
+    // Align Items
+    $align-items-properties: ("-flex-start" : "flex-start", "-flex-end" : "flex-end", "-center" : "center", "-baseline" : "baseline", "-stretch" : "stretch");
+    @each $label, $property in $align-items-properties {
+      .#{$main-prefix + $size + "-" + "align-items" + $label} {
+        -webkit-align-items: #{$property};
+        -moz-align-items: #{$property};
+        -ms-align-items: #{$property};
+        align-items: #{$property};
+      }
+    }
+
+
+    // =============================================== //
+    /* ================= Items ======================= */
+    // =============================================== //
+
+    // Flex Order
+    // I thought 10 was plenty.
+    $flex-order-properties: (0,1,2,3,4,5,6,7,8,9,10 );
+    @each $property in $flex-order-properties {
+      .#{$main-prefix + $size + "-" + "order-" + $property} {
+        -webkit-order: #{$property};
+        -moz-order: #{$property};
+        -ms-order: #{$property};
+        order: #{$property};
+      }
+    }
+
+    // =============================================== //
+
+    // Flex Grow
+    // I thought 10 was plenty.
+    $flex-grow-properties: (0,1,2,3,4,5,6,7,8,9,10 );
+    @each $property in $flex-grow-properties {
+      .#{$main-prefix + $size + "-" + "grow-" + $property} {
+        -webkit-flex-grow: #{$property};
+        -moz-flex-grow: #{$property};
+        -ms-flex-grow: #{$property};
+        flex-grow: #{$property};
+      }
+    }
+
+    // =============================================== //
+
+    // Flex Shrink
+    // I thought 10 was plenty.
+    $flex-shrink-properties: (0,1,2,3,4,5,6,7,8,9,10 );
+    @each $property in $flex-grow-properties {
+      .#{$main-prefix + $size + "-" + "shrink-" + $property} {
+        -webkit-flex-shrink: #{$property};
+        -moz-flex-shrink: #{$property};
+        -ms-flex-shrink: #{$property};
+        flex-shrink: #{$property};
+      }
+    }
+
+    // =============================================== //
+
+    // Align self
+    $align-self-properties: ("-flex-start" : "flex-start", "-flex-end" : "flex-end", "-center" : "center", "-baseline" : "baseline", "-stretch" : "stretch");
+    @each $label, $property in $align-self-properties {
+      .#{$main-prefix + $size + "-" + "align-self" + $label} {
+        -webkit-align-self: #{$property};
+        -moz-align-self: #{$property};
+        -ms-align-self: #{$property};
+        align-self: #{$property};
+      }
+    }
+  }
+}
