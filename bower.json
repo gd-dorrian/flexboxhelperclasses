@@ -1,0 +1,15 @@
+{
+  "name": "flexbox-helper-classes",
+  "description": "A CSS (and Sass file) that makes every css flexbox attribute available at every media size - for you to use in HTML. The idea is you can flex display a series of divs, and change the CSS at different media sizes as you see fit without access the CSS",
+  "main": [
+    "flexbox-helper-classes.scss",
+    "flexbox-helper-classes.css"
+  ],
+  "keywords": [
+    "Flexbox"
+  ],
+  "authors": [
+    "Greg Dorrian <greg.dorrian@gmail.com>"
+  ],
+  "private": false
+}
