@@ -14,7 +14,7 @@
     display: -moz-flex;
     display: -ms-flexbox;
     display: -ms-flex;
-    display: flex;
+    display: "flex";
   }
 
   .fx-xl-display-inline {
@@ -22,7 +22,7 @@
     display: -moz-inline-flex;
     display: -ms-inline-flexbox;
     display: -ms-inline-flex;
-    display: inline-flex;
+    display: "inline-flex";
   }
 
   .fx-xl-direction {
@@ -464,7 +464,7 @@
     display: -moz-flex;
     display: -ms-flexbox;
     display: -ms-flex;
-    display: flex;
+    display: "flex";
   }
 
   .fx-lg-display-inline {
@@ -472,7 +472,7 @@
     display: -moz-inline-flex;
     display: -ms-inline-flexbox;
     display: -ms-inline-flex;
-    display: inline-flex;
+    display: "inline-flex";
   }
 
   .fx-lg-direction {
@@ -914,7 +914,7 @@
     display: -moz-flex;
     display: -ms-flexbox;
     display: -ms-flex;
-    display: flex;
+    display: "flex";
   }
 
   .fx-md-display-inline {
@@ -922,7 +922,7 @@
     display: -moz-inline-flex;
     display: -ms-inline-flexbox;
     display: -ms-inline-flex;
-    display: inline-flex;
+    display: "inline-flex";
   }
 
   .fx-md-direction {
@@ -1364,7 +1364,7 @@
     display: -moz-flex;
     display: -ms-flexbox;
     display: -ms-flex;
-    display: flex;
+    display: "flex";
   }
 
   .fx-sm-display-inline {
@@ -1372,7 +1372,7 @@
     display: -moz-inline-flex;
     display: -ms-inline-flexbox;
     display: -ms-inline-flex;
-    display: inline-flex;
+    display: "inline-flex";
   }
 
   .fx-sm-direction {
@@ -1814,7 +1814,7 @@
     display: -moz-flex;
     display: -ms-flexbox;
     display: -ms-flex;
-    display: flex;
+    display: "flex";
   }
 
   .fx-xs-display-inline {
@@ -1822,7 +1822,7 @@
     display: -moz-inline-flex;
     display: -ms-inline-flexbox;
     display: -ms-inline-flex;
-    display: inline-flex;
+    display: "inline-flex";
   }
 
   .fx-xs-direction {

@@ -34,11 +34,11 @@ $media-sizes: (
     $flex-display-properties: ("" : "flex", "-inline": "inline-flex");
     @each $label, $property in $flex-display-properties {
       .#{$main-prefix + $size + "-" + "display" + $label} {
-        display: #{"-webkit-" + $property};
-        display: #{"-moz-" + $property};
-        display: #{"-ms-" + $property + "box"}; // IE10 uses -ms-flexbox
-        display: #{"-ms-" + $property}; // IE11
-        display: #{$property};
+        display: -webkit- + $property;
+        display: -moz- + $property;
+        display: -ms- + $property + box; // IE10 uses -ms-flexbox
+        display: -ms- + $property; // IE11
+        display: $property;
       }
     }
 
